@@ -1,5 +1,5 @@
 class ApiConst {
-  static const apiKey = 'PORTFOLIO_REMOVED_API_KEY';
+  static const apiKey = String.fromEnvironment('TMDB_API_KEY');
   static String fetchGenre() =>
       'https://api.themoviedb.org/3/genre/movie/list?api_key=$apiKey&language=en-US';
   static String moviesUpComming({int page = 1}) =>
